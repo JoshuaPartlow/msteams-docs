@@ -12,7 +12,7 @@ zone_pivot_groups: teams-app-environment
 
 Channel or group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
 
-[!INCLUDE [<sdk-include>](<msteams-docs\msteams-platform\includes\sdk-include.md>)]
+[!INCLUDE [<sdk-include>](<msteams-docs/msteams-platform/includes/sdk-include.md>)]
 
 ::: zone pivot="node-java-script"
 
@@ -24,7 +24,7 @@ Channel or group tabs deliver content to channels and group chats, and are a gre
     npm install yo gulp-cli --global
     ```
 
-2. At the command prompt, install Microsoft Teams App generator by entering the following command:
+1. At the command prompt, install Microsoft Teams App generator by entering the following command:
 
     ```cmd
     npm install generator-teams --global
@@ -346,7 +346,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     Your code should now include the following with **y8rCgT2b** replaced with your ngrok URL:
 
-# [current version](#tab/tabid-1)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
     ```javascript
         
@@ -375,7 +375,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
         }
     ```
 
-# [older version](#tab/tabid-2)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
     ```javascript
         
@@ -602,11 +602,11 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     Within **Tab.cshtml** the application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()`, respectively, sets `pages.config.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have completed the configuration requirements and the installation can proceed. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved. 
 
-2. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS ngrok URL to your tab.
+1. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS ngrok URL to your tab.
 
     Your code should now include the following with **y8rCgT2b** replaced with your ngrok URL:
 
-# [current version](#tab/tabid-1)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
     ```javascript
 
@@ -635,7 +635,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
         }
     ```
 
-# [older version](#tab/tabid-2)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
     ```javascript
 
@@ -665,7 +665,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
     ```
 ***
 
-3. Make sure to save the updated **Tab.cshtml**.
+1. Make sure to save the updated **Tab.cshtml**.
 
 ### Build and run your application
 

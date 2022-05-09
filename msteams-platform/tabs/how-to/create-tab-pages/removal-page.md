@@ -57,7 +57,7 @@ Authentication is required before allowing a user to delete the tab content. Con
 
 The following is a sample tab removal code block:
 
-# [current version](#tab/tabid-1)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
 ```html
 <body>
@@ -79,7 +79,7 @@ The following is a sample tab removal code block:
 </body>
 ```
 
-# [older version](#tab/tabid-2)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <body>

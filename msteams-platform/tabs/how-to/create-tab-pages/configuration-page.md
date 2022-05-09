@@ -15,7 +15,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 * A [message extension](~/messaging-extensions/what-are-messaging-extensions.md).
 * An [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-[!INCLUDE [<sdk-include>](<msteams-docs\msteams-platform\includes\sdk-include.md>)]
+[!INCLUDE [<sdk-include>](<msteams-docs/msteams-platform/includes/sdk-include.md>)]
 
 ## Configure a channel or group chat tab
 
@@ -29,7 +29,7 @@ An example of a configuration page is shown in the following image:
 
 The following code is an example of corresponding code for the configuration page:
 
-# [current version](#tab/tabid-1)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
 ```html
 <head>
@@ -86,7 +86,7 @@ The following code is an example of corresponding code for the configuration pag
 </body>
 ```
 
-# [older version](#tab/tabid-2)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <head>
@@ -200,7 +200,7 @@ Add context interface placeholders to your base `configurationUrl`. For example:
 
 After your page uploads, Teams updates the query string placeholders with relevant values. Include logic in the configuration page to retrieve and use those values. For more information on working with URL query strings, see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN Web Docs. The following code example provides the way to extract a value from the `configurationUrl` property:
 
-# [current version](#tab/tabid-1)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
 ```html
 <script>
@@ -215,7 +215,7 @@ document.write(getId());
 </script>
 ```
 
-# [older version](#tab/tabid-2)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <script>
@@ -238,7 +238,7 @@ The `app.getContext((context) => {})` function retrieves the [context interface]
 
 The following code provides an example of adding this function to the configuration page to retrieve context values:
 
-# [current version](#tab/tabid-1)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -254,7 +254,7 @@ The following code provides an example of adding this function to the configurat
 ...
 ```
 
-# [older version](#tab/tabid-2)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -270,7 +270,7 @@ The following code provides an example of adding this function to the configurat
 ...
 ```
 
-****
+***
 
 ## Context and authentication
 
@@ -282,7 +282,7 @@ Set your manifest's `canUpdateConfiguration` property to `true`, that enables th
 
 Microsoft Teams `setConfig()` (formally `setSettings()`) configuration for removal page:
 
-# [current version](#tab/tabid-1)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
 app.pages.config.setConfig({
@@ -294,7 +294,7 @@ app.pages.config.setConfig({
 });
 ```
 
-# [older version](#tab/tabid-2)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
 microsoftTeams.settings.setSettings({

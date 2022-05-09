@@ -186,21 +186,21 @@ Create a content page and update the existing files of the personal tab applicat
 
 1. Update the **contentURL** path component **yourDefaultTabNameTab** with your actual tab name.
 
-2. Save the updated `manifest.json` file.
+1. Save the updated `manifest.json` file.
 
-3. Open **Tab.ts** in your Visual Studio Code from the following path to provide your content page in an IFrame:
+1. Open **Tab.ts** in your Visual Studio Code from the following path to provide your content page in an IFrame:
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
     ```
 
-4. Add the following to the list of IFrame decorators:
+1. Add the following to the list of IFrame decorators:
 
     ```typescript
      @PreventIframe("/<yourDefaultTabName Tab>/personal.html")
     ```
 
-5. Save the updated file. Your tab code is complete.
+1. Save the updated file. Your tab code is complete.
 
 ### Create your app package
 

@@ -13,6 +13,8 @@ Deep links are a navigation mechanism that you can use to connect users with inf
 * Navigating the user to the content within one of your app's tabs. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so that the user can view more details about the activity.
 * Your app automates or simplifies certain user tasks, such as creating a chat or scheduling a meeting, by pre-populating the deep links with required parameters. This avoids the need for users to manually enter information.
 
+[!INCLUDE [<sdk-include>](<msteams-docs/msteams-platform/includes/sdk-include.md>)]
+
 > [!NOTE]
 >
 > The behavior of deep links is dependent on a number of factors. The following list outlines the behavior of deep links on Teams entities.
@@ -39,7 +41,7 @@ The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of cr
 
 You can create deep links to entities in Teams apps. This method is used to create links that navigate to content and information within your tab. For example, if your tab contains a task list, team members can create and share links to individual tasks. When you select the link, it navigates to your tab that focuses on the specific item.
 
-# [TeamsJS v2](#tab/v2)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
 To implement this, you add a **copy link** action to each item, in whatever way best suits your UI. When the user takes this action, you call [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
@@ -55,7 +57,7 @@ You will need to replace the fields with the appropriate information:
 
 For more information see, [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true).
 
-# [TeamsJS v1](#tab/v1)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 To implement this, you add a **copy link** action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
@@ -165,7 +167,7 @@ For additional information about capabilities and the APIs in TeamsJS, see [Buil
 
 A deep link can be used to navigate within an app. The following code demonstrates how to use a deep link to navigate to a specific entity within your Teams app.
 
-# [TeamsJS v2](#tab/v2)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
 You can trigger a navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp) function as shown in the following code:
 
@@ -181,7 +183,7 @@ else { /* handle case where capability isn't supported */ }
 
 For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. If needed, it is also possible to directly open a deep link using the [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-openlink&preserve-view=true) function.
 
-# [TeamsJS v1](#tab/v1)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 To trigger a deep link from your tab, call:
 
@@ -195,7 +197,7 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 You can use a deep link to open a scheduling dialog from your Teams app, as shown in the following code. This is especially useful if your app helps the user complete calendar or scheduling related tasks.
 
-# [TeamsJS v2](#tab/v2)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
 // Open a scheduling dialog from your tab
@@ -215,7 +217,7 @@ else { /* handle case where capability isn't supported */ }
 
 For more information about working with the calendar see, the [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) namespace in the API reference documentation.
 
-# [TeamsJS v1](#tab/v1)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
 // Open a scheduling dialog from your tab
@@ -253,7 +255,7 @@ To use this deep link with your bot, you can specify this as the URL target in y
 
 You can use a deep link to open an app install dialog from your Teams app, as shown in the following code.
 
-# [TeamsJS v2](#tab/v2)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
 // Open an app install dialog from your tab
@@ -268,7 +270,7 @@ else { /* handle case where capability isn't supported */ }
 
 For more information about the install dialog see, the [appInstallDialog.openAppInstallDialog()](/javascript/api/@microsoft/teams-js/appinstalldialog?view=msteams-client-js-latest#@microsoft-teams-js-appinstalldialog-openappinstalldialog&preserve-view=true) function in the API reference documentation.
 
-# [TeamsJS v1](#tab/v1)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
 // Open an app install dialog from your tab

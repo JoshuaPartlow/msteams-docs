@@ -32,7 +32,7 @@ For your page to display in Teams, you must include the [Microsoft Teams JavaScr
 
 The following code provides an example of how your page and the Teams client communicate:
 
-# [TeamsJS v2](#tab/tabid-1)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
 ```html
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ The following code provides an example of how your page and the Teams client com
 </body>
 ```
 
-# [TeamsJS v1](#tab/tabid-2)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <!DOCTYPE html>
