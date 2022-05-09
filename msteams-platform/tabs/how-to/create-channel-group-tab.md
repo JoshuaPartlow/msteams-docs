@@ -12,7 +12,7 @@ zone_pivot_groups: teams-app-environment
 
 Channel or group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
 
-[!INCLUDE [<sdk-include>](<msteams-docs/msteams-platform/includes/sdk-include.md>)]
+[!INCLUDE [sdk-include](msteams-docs/msteams-platform/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
