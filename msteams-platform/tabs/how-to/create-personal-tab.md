@@ -15,6 +15,8 @@ Personal tabs, along with personally-scoped bots, are part of personal apps and 
 
 Ensure that you have all the [prerequsites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 
+[!INCLUDE [sdk-include](msteams-docs/msteams-platform/includes/sdk-include.md)]
+
 ::: zone pivot="node-java-script"
 
 ## Create a personal tab with Node.js
@@ -184,21 +186,21 @@ Create a content page and update the existing files of the personal tab applicat
 
 1. Update the **contentURL** path component **yourDefaultTabNameTab** with your actual tab name.
 
-1. Save the updated `manifest.json` file.
+2. Save the updated `manifest.json` file.
 
-1. Open **Tab.ts** in your Visual Studio Code from the following path to provide your content page in an IFrame:
+3. Open **Tab.ts** in your Visual Studio Code from the following path to provide your content page in an IFrame:
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
     ```
 
-1. Add the following to the list of IFrame decorators:
+4. Add the following to the list of IFrame decorators:
 
     ```typescript
      @PreventIframe("/<yourDefaultTabName Tab>/personal.html")
     ```
 
-1. Save the updated file. Your tab code is complete.
+5. Save the updated file. Your tab code is complete.
 
 ### Create your app package
 
@@ -361,10 +363,10 @@ In Visual Studio Solution Explorer, right-click on the project and select **Edit
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Pages** folder and add `microsoftTeams.initialize()` in the `<script>` tags and save.
+1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Pages** folder and add `app.initialize()` in the `<script>` tags and save.
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
@@ -526,10 +528,10 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Views** > **PersonalTab** folder and add `microsoftTeams.initialize()` inside the `<script>` tags and save.
+1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Views** > **PersonalTab** folder and add `app.initialize()` inside the `<script>` tags and save.
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
